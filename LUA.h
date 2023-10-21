@@ -9,12 +9,11 @@
 class LuaWrapper {
   public:
     LuaWrapper();
-    String Lua_dostring(const String *script);
+    String Lua_dostring(char *script);
     void Lua_register(const String name, const lua_CFunction function);
 
   private:
     lua_State *_state;
-    String addConstants();
 };
 
 #endif
