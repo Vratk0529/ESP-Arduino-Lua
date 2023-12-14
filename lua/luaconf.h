@@ -115,7 +115,7 @@
 #define LUA_FLOAT_DOUBLE	2
 #define LUA_FLOAT_LONGDOUBLE	3
 
-#define LUA_INT_TYPE	LUA_INT_LONGLONG	// I need the precision for a calculator
+#define LUA_INT_TYPE	LUA_INT_LONG	// I need the precision for a calculator
 #define LUA_FLOAT_TYPE	LUA_FLOAT_LONGDOUBLE
 
 #if defined(LUA_32BITS)		/* { */
