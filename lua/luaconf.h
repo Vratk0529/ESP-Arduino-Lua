@@ -115,16 +115,10 @@
 #define LUA_FLOAT_DOUBLE	2
 #define LUA_FLOAT_LONGDOUBLE	3
 
+#define LUA_INT_TYPE	LUA_INT_LONGLONG	// I need the precision for a calculator
+#define LUA_FLOAT_TYPE	LUA_FLOAT_LONGDOUBLE
+
 #if defined(LUA_32BITS)		/* { */
-/*
-** 32-bit integers and 'float'
-*/
-#if LUAI_BITSINT >= 32  /* use 'int' if big enough */
-#define LUA_INT_TYPE	LUA_INT_INT
-#else  /* otherwise use 'long' */
-#define LUA_INT_TYPE	LUA_INT_LONG
-#endif
-#define LUA_FLOAT_TYPE	LUA_FLOAT_FLOAT
 
 #elif defined(LUA_C89_NUMBERS)	/* }{ */
 /*
